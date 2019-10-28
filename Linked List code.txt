@@ -1,0 +1,74 @@
+#include <iostream>
+
+
+using namespace std;
+
+class Node {
+public: 
+	int data;
+	Node* next;
+};
+
+void List(Node* n)
+{
+  while (n !=NULL) {
+    cout << n->data << " ";
+    n = n->next;
+  }
+}
+
+
+
+int main() {
+
+	Node* head = NULL;
+	Node* second = NULL;
+	Node* third = NULL;
+	Node* fourth = NULL;
+  Node* insert_node = NULL;
+	Node* fifth = NULL;
+	Node* sixth = NULL;
+	Node* seventh = NULL;
+	Node* eighth = NULL;
+
+	head = new Node();
+	second = new Node();
+	third = new Node();
+	fourth = new Node();
+  insert_node = new Node();
+	fifth = new Node();
+	sixth = new Node();
+	seventh = new Node();
+	eighth = new Node();
+
+	head->data = 47;
+	head->next = second;
+
+	second->data = 12;
+	second->next = third;
+
+	third->data = 92;
+	third->next = fourth;
+
+	fourth->data = 65;
+	fourth->next = insert_node;
+
+        insert_node->data = 17;
+        insert_node->next = fifth;
+
+	fifth->data = 80;
+	fifth->next = sixth;
+
+	sixth->data = 46;
+	sixth->next = seventh;
+
+	seventh->data = 5;
+	seventh->next = eighth;
+
+	eighth->data = 78;
+	eighth->next = NULL;
+
+	List(head);
+
+	return 0;
+};
